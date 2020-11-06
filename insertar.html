@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Registos</title>
+</head>
+
+<body>
+
+    
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-left">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTask">
+                        Agregar 
+                    </button>
+                    
+                    <a href="mostrar.php"><input type="button" class="btn btn-primary" value="Mostrar"></a>
+                    
+                    <a href="mostrar2.php"><input type="button" class="btn btn-primary" value="Eliminar"></a>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <div class="text-right">
+                        <form name=f2 action="buscar.php" method="post">
+                            <input type="text" name="busqueda" required id="busqueda" class="inpSearch" placeholder="Buscar por id" >  
+                            <input type="submit" class="btn btn-primary" value="Buscar">
+                        </form>
+                    </div>
+                </div>
+                <br>            
+            </div>
+            
+             <div class="center"> 
+            <canvas id="grafica" width="300" height="300" style="border: 5;"></canvas>
+            </div>
+        </div>
+        
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTask" tabindex="-1" role="dialog" aria-labelledby="modalTask" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTask">Ingresar Alumno</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form name= f1 action="guardar.php" method="POST">
+                    <div class="modal-body">
+                        <label for="form-control" class="col-sm-2 col-form-label">ID</label>           
+                        <input type="text"  name="id" required> 
+                        
+                        <label for="form-control" class="col-sm-2 col-form-label">Nombre</label>
+                        <input type="text"  name="nombre" required>
+                       
+                        <label for="form-control" class="col-sm-2 col-form-label">Apellidos</label>                    
+                        <input type="text"  name="apellidos" required>
+                      
+                        <label for="form-control" class="col-sm-2 col-form-label">Edad</label>
+                        <input type="text"  name="edad" required>
+                       
+                        <label for="form-control" class="col-sm-2 col-form-label">Puesto</label>
+                        <input type="text"  name="puesto" required>                       
+    
+                    </div>
+                    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <input type="submit"  class="btn btn-success" value="Guardar">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+        </body>
+</html>
